@@ -755,7 +755,7 @@
 				.on("click.jstree", ".jstree-anchor", $.proxy(function (e) {
 						var a = e.currentTarget;
                         var dontPreventDefault;
-                        if ( a && $.nodeName(a, 'A') && a.protocol !== 'javascript:' && $(a).attr('href') !== '#' ) {
+                        if ( this.settings.core.click_nav && a && $.nodeName(a, 'A') && a.protocol !== 'javascript:' && $(a).attr('href') !== '#' ) {
                             dontPreventDefault = true;
                         }
                         dontPreventDefault || e.preventDefault();
